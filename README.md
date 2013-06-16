@@ -40,9 +40,7 @@ There will also be runners up for elegant code solutions.
 The tests are run by loading in all the values from the expected file and the actual file.
 Either produce the actual file programmatically, or copy and paste from your console into this file.
 The format is:
-'''xml
-    <number>=<numeral>\n
-'''
+> <number>=<numeral>\n
     is
 > 9001=nine thousand and one
 
