@@ -1,6 +1,6 @@
 ## The Polyglot Challenge ##
 
-The challenge is to write some code to convert numbers to their british english numeral equivalent using the least
+The challenge is to write code that will convert numbers to their british english numeral equivalent using the least
 amount of legitimate lines of code in any language (as long as it can be shown to execute).
 i.e. 1 as one, 101 as one hundred and one, 900090 as nine hundred thousand and ninety.
 
@@ -10,7 +10,7 @@ As long as you have java installed, and you can run junit, you can run these tes
 The definition of english numerals can be found at:
 http://en.wikipedia.org/wiki/English_numerals
 
-The session is 3 hours long.  Please refer to the rules below.
+The session is 3 hours long, which means 2 1/2 hours of coding.  Please refer to the rules below.
 
 
 
