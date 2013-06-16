@@ -18,8 +18,8 @@ The session is 3 hours long.  Please refer to the rules below.
 
 * We'll be using intellij to format each person's code using the defaults from when you code format (alt + cmd + l).
 
-**  If the code would naturally have a line break this should be put in place (i.e. return "fish"; in js should have a
-    line break at the end)
+    *   If the code would naturally have a line break this should be put in place (i.e. return "fish"; in js should have a
+        line break at the end)
 
 * If the line goes over 80 characters, a forfeit of a new line per character will be introduced.
 
