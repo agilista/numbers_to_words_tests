@@ -16,14 +16,14 @@ The session is 3 hours long.  Please refer to the rules below.
 
 ### Rules ###
 
-We'll be using intellij to format the code (alt + cmd + l) by default.
-If the code would naturally have a line break this should be put in place
-(i.e. return "fish"; in js should have a \n at the end)
+* We'll be using intellij to format each person's code using the defaults from when you code format (alt + cmd + l).
+**  If the code would naturally have a line break this should be put in place (i.e. return "fish"; in js should have a
+    line break at the end)
 
-If the line goes over 80 characters, a forfeit of a new line per character will be introduced.
+* If the line goes over 80 characters, a forfeit of a new line per character will be introduced.
 
-If any libs are linked to, _all_ of the source from that library should be included, and they will also be counted as
-lines of code.  Any build files, html files etc will also be included.
+*   If any libs are linked to, _all_ of the source from that library should also be included, with any subsequent
+    linking, as they will all also be counted as lines of code.  Any build files, html files etc will also be included.
 
 Every participant should stick to the spirit of the rules and not the letter.
 If you're unsure whether you'll fall foul of competition rules, shout about it :o)
@@ -40,8 +40,11 @@ There will also be runners up for elegant code solutions.
 The tests are run by loading in all the values from the expected file and the actual file.
 Either produce the actual file programmatically, or copy and paste from your console into this file.
 The format is:
+'''xml
     <number>=<numeral>\n
-    i.e. 9001=nine thousand and one
+'''
+    is
+> 9001=nine thousand and one
 
 
 Any fails should hopefully be pretty self explanatory.
