@@ -42,7 +42,8 @@ public class NumbersToWordsTests {
     public void checkExpectedValue() {
         String expectedValue = expected.getProperty(numberToCheck);
         String actualValue = actual.getProperty(numberToCheck);
-        assertNotNull(String.format("The value for \"%s\" has not been found in the file actual_values.properties", numberToCheck), actualValue);
+        assertNotNull(String.format("The value for \"%s\" has not been found in the file actual_values.properties",
+                numberToCheck), actualValue);
         assertThat(actualValue.trim(), equalTo(expectedValue.trim()));
     }
 
