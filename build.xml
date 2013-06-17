@@ -1,0 +1,149 @@
+<project name="numbers_to_words_tests" default="main">
+
+    <target name="main" depends="make,save" />
+
+    <target name="clean">
+        <clean_dir dir="made" />
+        <clean_dir dir="made/lib" />
+        <clean_dir dir="dist" />
+    </target>
+
+    <target name="make" depends="clean">
+        <make module="." jarname="numbers_to_words_tests.jar" source="src" targetdir="made">
+            <make.classpath>
+                <classpath>
+                    <path refid="test.classpath" />
+                </classpath>
+            </make.classpath>
+            <make.manifest>
+                <manifest>
+                    <attribute name="Main-Class" value="uk.co.itstherules.NumbersToWordsTestsRunner"/>
+                    <attribute name="Class-Path" value="./ lib/hamcrest-all-1.3.jar lib/junit-4.11.jar"/>
+                </manifest>
+            </make.manifest>
+        </make>
+        <copy_resource source="src-resource" dest="made" />
+        <copy_resource source="lib" dest="made/lib" />
+    </target>
+
+    <target name="save">
+        <copy_resource source="made" dest="dist" />
+    </target>
+
+
+    <path id="test.classpath">
+        <pathelement location="lib/hamcrest-all-1.3.jar" />
+        <pathelement location="lib/junit-4.11.jar" />
+    </path>
+
+    <macrodef name="make">
+        <attribute name="module" />
+        <attribute name="source" />
+        <attribute name="targetdir" />
+        <attribute name="jarname" />
+        <element name="make.classpath" />
+        <element name="make.manifest" optional="true" />
+        <sequential>
+            <java.compile module="@{module}" source="@{source}">
+                <classpath.element>
+                    <make.classpath />
+                </classpath.element>
+            </java.compile>
+            <java.jar jarname="@{jarname}" module="@{module}" targetdir="@{targetdir}">
+                <manifest.element><make.manifest /></manifest.element>
+            </java.jar>
+        </sequential>
+    </macrodef>
+
+    <macrodef name="test">
+        <attribute name="jarname" />
+        <attribute name="basedir" />
+        <element name="test.classpath" />
+        <sequential>
+            <clean_dir dir="@{basedir}/output"/>
+            <junit fork="true" haltonfailure="true" haltonerror="true" printsummary="true" showoutput="true" dir="@{basedir}">
+                <jvmarg value="-Xmx1024M"/>
+                <jvmarg value="-XX:MaxPermSize=2048M" />
+                <test.classpath/>
+                <formatter type="xml" />
+                <batchtest todir="@{basedir}/output">
+                    <zipfileset src="@{jarname}" includes="**/*Test.class" excludes="functional/**"/>
+                </batchtest>
+            </junit>
+        </sequential>
+    </macrodef>
+
+    <macrodef name="save">
+        <attribute name="targetdir" />
+        <element name="save.fileset" />
+        <sequential>
+            <clean_dir dir="@{targetdir}" />
+            <copy todir="@{targetdir}"><save.fileset /></copy>
+        </sequential>
+    </macrodef>
+
+    <macrodef name="java.compile">
+        <attribute name="source" />
+        <attribute name="module" />
+        <element name="classpath.element" optional="true"/>
+        <sequential>
+            <clean_dir dir="@{module}/classes" />
+            <javac srcdir="@{module}/@{source}" destdir="@{module}/classes" debug="true" includeantruntime="false" encoding="UTF-8">
+                <compilerarg value="-Xlint:unchecked"/>
+                <classpath.element/>
+            </javac>
+        </sequential>
+    </macrodef>
+
+    <macrodef name="java.jar">
+        <attribute name="jarname" />
+        <attribute name="module" />
+        <attribute name="targetdir" />
+        <element name="manifest.element" optional="true" />
+        <sequential>
+            <jar destfile="@{module}/@{targetdir}/@{jarname}">
+                <manifest.element/>
+                <fileset dir="@{module}/classes">
+                    <include name="**/*"/>
+                </fileset>
+            </jar>
+        </sequential>
+    </macrodef>
+
+    <macrodef name="copyfiles">
+        <attribute name="fromdir" />
+        <attribute name="todir" />
+        <attribute name="pattern" />
+        <sequential>
+            <copy todir="@{todir}" failonerror="true">
+                <fileset dir="@{fromdir}" >
+                    <include name="@{pattern}"/>
+                </fileset>
+            </copy>
+        </sequential>
+    </macrodef>
+
+    <macrodef name="copy_resource">
+        <attribute name="source" />
+        <attribute name="dest" />
+        <sequential>
+            <copy todir="@{dest}" failonerror="false">
+                <fileset dir="@{source}" >
+                    <include name="**/*"/>
+                </fileset>
+            </copy>
+        </sequential>
+    </macrodef>
+
+
+    <macrodef name="clean_dir">
+        <attribute name="dir" />
+        <sequential>
+            <delete dir="@{dir}" includeemptydirs="true" />
+            <mkdir dir="@{dir}" />
+        </sequential>
+    </macrodef>
+
+
+
+</project>

@@ -1,0 +1,1 @@
+java -jar numbers_to_words_tests.jar
