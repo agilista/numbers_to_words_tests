@@ -5,7 +5,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
+import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.InputStreamReader;
 import java.util.*;
 
 import static org.hamcrest.core.IsEqual.equalTo;
@@ -31,7 +33,9 @@ public class NumbersToWordsTests {
     private static Properties loadValues(String path) {
         try {
             Properties properties = new Properties();
-            properties.load(new FileReader(path));
+            BufferedReader reader = new BufferedReader(new InputStreamReader(ExclusionFilter.class.getClassLoader()
+                    .getResourceAsStream(path)));
+            properties.load(reader);
             return properties;
         } catch (Exception e) {
             throw new RuntimeException(e);

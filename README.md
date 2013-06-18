@@ -76,3 +76,38 @@ e.g.
 
 
 Any fails should hopefully be pretty self explanatory.
+
+
+
+### How to Run The Line Counter ###
+
+Clone this repo then:
+
+> cd dist
+
+> sh ./count_me.sh _dir_
+
+i.e.
+
+> sh ./count_me.sh ../
+
+p.s. this command for this project should be 738 lines :o)
+
+This will run against the directory or file pointed to.  The code will recurse over the directory and, with the
+exception of the excluded files and extensions, will count everything.
+
+If this doesn't work for you, you may have to recompile the source.
+cd to the root of the project and:
+
+> ant
+
+
+
+
+### How To Use The Line Counter ###
+
+The line counter is run by loading in exclusions for extensions and files (in the excluded_extensions.txt and
+excluded_files.txt files)
+
+If you need to add another extension or file to exclude, please ask to see if its reasonable.  Auto-generated class
+files for typed languages compiling into the same root folder are ideal candidates for exclusion

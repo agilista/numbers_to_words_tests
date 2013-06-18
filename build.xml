@@ -1,6 +1,6 @@
 <project name="numbers_to_words_tests" default="main">
 
-    <target name="main" depends="make,save" />
+    <target name="main" depends="make,test,save" />
 
     <target name="clean">
         <clean_dir dir="made" />
@@ -10,20 +10,33 @@
 
     <target name="make" depends="clean">
         <make module="." jarname="numbers_to_words_tests.jar" source="src" targetdir="made">
-            <make.classpath>
+            <make-classpath>
                 <classpath>
-                    <path refid="test.classpath" />
+                    <path refid="numbers_to_words_tests.classpath" />
                 </classpath>
-            </make.classpath>
-            <make.manifest>
-                <manifest>
-                    <attribute name="Main-Class" value="uk.co.itstherules.NumbersToWordsTestsRunner"/>
-                    <attribute name="Class-Path" value="./ lib/hamcrest-all-1.3.jar lib/junit-4.11.jar"/>
-                </manifest>
-            </make.manifest>
+            </make-classpath>
+        </make>
+        <make module="." jarname="numbers_to_words_tests-tests.jar" source="test" targetdir="made">
+            <make-classpath>
+                <classpath>
+                    <path refid="numbers_to_words_tests.classpath" />
+                    <path refid="numbers_to_words_tests.test.classpath" />
+                </classpath>
+            </make-classpath>
         </make>
         <copy_resource source="src-resource" dest="made" />
         <copy_resource source="lib" dest="made/lib" />
+    </target>
+
+    <target name="test">
+        <test jarname="made/numbers_to_words_tests-tests.jar" basedir=".">
+            <test-classpath>
+                <classpath>
+                    <path refid="numbers_to_words_tests.classpath" />
+                    <path refid="numbers_to_words_tests.test.classpath" />
+                </classpath>
+            </test-classpath>
+        </test>
     </target>
 
     <target name="save">
@@ -31,9 +44,15 @@
     </target>
 
 
-    <path id="test.classpath">
+    <path id="numbers_to_words_tests.classpath">
         <pathelement location="lib/hamcrest-all-1.3.jar" />
         <pathelement location="lib/junit-4.11.jar" />
+    </path>
+
+    <path id="numbers_to_words_tests.test.classpath">
+        <pathelement location="made/numbers_to_words_tests.jar" />
+        <pathelement location="made/numbers_to_words_tests-tests.jar" />
+        <pathelement location="made/" />
     </path>
 
     <macrodef name="make">
@@ -41,12 +60,12 @@
         <attribute name="source" />
         <attribute name="targetdir" />
         <attribute name="jarname" />
-        <element name="make.classpath" />
+        <element name="make-classpath" />
         <element name="make.manifest" optional="true" />
         <sequential>
             <java.compile module="@{module}" source="@{source}">
                 <classpath.element>
-                    <make.classpath />
+                    <make-classpath />
                 </classpath.element>
             </java.compile>
             <java.jar jarname="@{jarname}" module="@{module}" targetdir="@{targetdir}">
@@ -58,13 +77,13 @@
     <macrodef name="test">
         <attribute name="jarname" />
         <attribute name="basedir" />
-        <element name="test.classpath" />
+        <element name="test-classpath" />
         <sequential>
             <clean_dir dir="@{basedir}/output"/>
             <junit fork="true" haltonfailure="true" haltonerror="true" printsummary="true" showoutput="true" dir="@{basedir}">
                 <jvmarg value="-Xmx1024M"/>
                 <jvmarg value="-XX:MaxPermSize=2048M" />
-                <test.classpath/>
+                <test-classpath/>
                 <formatter type="xml" />
                 <batchtest todir="@{basedir}/output">
                     <zipfileset src="@{jarname}" includes="**/*Test.class" excludes="functional/**"/>
