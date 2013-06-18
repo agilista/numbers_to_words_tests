@@ -17,7 +17,8 @@ The session is 3 hours long, which means 2 1/2 hours of coding.  Please refer to
 
 ### Rules ###
 
-* We'll be using intellij to format each person's code using the defaults from when you code format (alt + cmd + l).
+* We'll be using intellij to format each person or groups code using the defaults from when you code format
+  (alt + cmd + l).
 
     *   If the code would naturally have a line break this should be put in place (i.e. return "fish"; in js should have a
         line break at the end)
