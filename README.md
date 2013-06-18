@@ -52,3 +52,20 @@ e.g.
 
 
 Any fails should hopefully be pretty self explanatory.
+
+
+
+## How to Run The Tests ##
+
+Clone this repo then:
+
+> cd dist
+> sh ./run_me.sh
+
+You should see a number of tests legitimately fail, as the actual_values.properties file does not contain the same
+values as the expected_values.properties
+
+If this doesn't work for you, you may have to recompile the source.
+cd to the root of the project and:
+
+> ant
