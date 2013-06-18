@@ -55,7 +55,7 @@ Any fails should hopefully be pretty self explanatory.
 
 
 
-## How to Run The Tests ##
+### How to Run The Tests ###
 
 Clone this repo then:
 
