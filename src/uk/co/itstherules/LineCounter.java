@@ -7,6 +7,7 @@ import java.io.IOException;
 
 public final class LineCounter {
 
+    private static final int MAXIMUM_LINE_SIZE = 120;
     private final String[] paths;
 
     public static void main(String[] args) {
@@ -58,7 +59,14 @@ public final class LineCounter {
             System.out.println("Counting lines of code in file:"+ absolutePath);
 
             BufferedReader reader = new BufferedReader(new FileReader(file));
-            while(reader.readLine() != null) { count++; }
+            String line;
+            while((line = reader.readLine()) != null) {
+                count++;
+                int length = line.length();
+                if(length > MAXIMUM_LINE_SIZE){
+                    count += length - MAXIMUM_LINE_SIZE;
+                }
+            }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

@@ -20,6 +20,12 @@ public class LineCounterTest {
         assertThat(unit.count(), equalTo(2));
     }
 
+    @Test
+    public void twoCountOneLineReallyLong() {
+        LineCounter unit = new LineCounter("test-resource/two_lines_one_really_long.txt");
+        assertThat(unit.count(), equalTo(11));
+    }
+
     @Test(expected = IllegalArgumentException.class)
     public void fileDoesntExist() {
         LineCounter unit = new LineCounter("test-resource/i_dont_exist.txt");
