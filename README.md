@@ -1,7 +1,8 @@
 ## The Polyglot Challenge ##
 
 The challenge is to write code that will convert numbers to their british english numeral equivalent using the least
-amount of legitimate lines of code in any programming language (as long as it can be shown to execute).
+amount of legitimate lines of code in any programming language (as long as lines of code can be counted and it can be
+shown to execute).
 i.e. 1 as one, 101 as one hundred and one, 900090 as nine hundred thousand and ninety.
 
 We've bundled some tests with this check-in, so it isn't too important that you know british english numerals.
