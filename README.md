@@ -17,6 +17,8 @@ The session is 3 hours long, which means 2 1/2 hours of coding.  Please refer to
 
 ### Rules ###
 
+* You can take up the challenge individually or as a group.  Groups shouldn't really be larger than 5 people
+
 * We'll be using intellij to format each person or groups code using the defaults from when you code format
   (alt + cmd + l).
 
