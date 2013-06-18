@@ -40,6 +40,7 @@ There will also be runners up for elegant code solutions.
 Clone this repo then:
 
 > cd dist
+
 > sh ./run_me.sh
 
 You should see a number of tests legitimately fail, as the actual_values.properties file does not contain the same
