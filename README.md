@@ -35,26 +35,6 @@ There will also be runners up for elegant code solutions.
 
 
 
-
-### How To Use The Bundled Tests ###
-
-The tests are run by loading in all the values from the expected file and the actual file.
-Either produce the actual file programmatically, or copy and paste from your console into this file.
-The format is:
-
-> number=numeral\n
-
-
-e.g.
-
-
-> 9001=nine thousand and one
-
-
-Any fails should hopefully be pretty self explanatory.
-
-
-
 ### How to Run The Tests ###
 
 Clone this repo then:
@@ -69,3 +49,25 @@ If this doesn't work for you, you may have to recompile the source.
 cd to the root of the project and:
 
 > ant
+
+
+
+
+### How To Use The Bundled Tests ###
+
+The tests are run by loading in all the values from the expected_values.properties file and the actual_values.properties
+file.
+Either produce the actual file programmatically, or copy and paste from your console into this file.
+
+The format is:
+
+> number=numeral\n
+
+
+e.g.
+
+
+> 9001=nine thousand and one
+
+
+Any fails should hopefully be pretty self explanatory.
