@@ -58,7 +58,7 @@ cd to the root of the project and:
 
 The tests are run by loading in all the values from the expected_values.properties file and the actual_values.properties
 file.
-Either produce the actual file programmatically, or copy and paste from your console into this file.
+Either produce the actual_values.properties file programmatically, or copy and paste from your console into this file.
 
 The format is:
 
