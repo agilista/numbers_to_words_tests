@@ -91,7 +91,8 @@ i.e.
 
 > sh ./count_me.sh ../
 
-p.s. this command for this project should be 787 lines including overage on characters :o)
+p.s. this command for this project should be 788 lines including overage on characters (remember 1 line forfeit every
+character over 120 in 1 line) :o)
 
 This will run against the directory or file pointed to.  The code will recurse over the directory and, with the
 exception of the excluded files and extensions, will count everything.
