@@ -6,7 +6,6 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.InputStreamReader;
 import java.util.*;
 
@@ -33,8 +32,9 @@ public class NumbersToWordsTests {
     private static Properties loadValues(String path) {
         try {
             Properties properties = new Properties();
-            BufferedReader reader = new BufferedReader(new InputStreamReader(ExclusionFilter.class.getClassLoader()
-                    .getResourceAsStream(path)));
+            BufferedReader reader = new BufferedReader(new InputStreamReader(
+                    ExclusionFilter.class.getClassLoader().getResourceAsStream(
+                            path)));
             properties.load(reader);
             return properties;
         } catch (Exception e) {
@@ -46,8 +46,10 @@ public class NumbersToWordsTests {
     public void checkExpectedValue() {
         String expectedValue = expected.getProperty(numberToCheck);
         String actualValue = actual.getProperty(numberToCheck);
-        assertNotNull(String.format("The value for \"%s\" has not been found in the file actual_values.properties",
-                numberToCheck), actualValue);
+        assertNotNull(
+                String.format(
+                        "The value for \"%s\" has not been found in the file actual_values.properties",
+                        numberToCheck), actualValue);
         assertThat(actualValue.trim(), equalTo(expectedValue.trim()));
     }
 

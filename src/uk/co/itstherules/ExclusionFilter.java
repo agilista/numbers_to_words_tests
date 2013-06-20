@@ -22,7 +22,7 @@ public class ExclusionFilter implements FileFilter {
             BufferedReader reader = new BufferedReader(new InputStreamReader(ExclusionFilter.class.getClassLoader().
                     getResourceAsStream(fileName)));
             String line;
-            while ((line = reader.readLine())!=null) {
+            while ((line = reader.readLine()) != null) {
                 values.add(line);
             }
             return values;
@@ -35,7 +35,8 @@ public class ExclusionFilter implements FileFilter {
     public boolean accept(final File pathName) {
         String name = pathName.getName().toLowerCase();
         String extension = getExtension(name);
-        return !excludedFiles.contains(name) && !excludedExtensions.contains(extension);
+        return !excludedFiles.contains(name)
+                && !excludedExtensions.contains(extension);
 
     }
 

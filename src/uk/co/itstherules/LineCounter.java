@@ -11,8 +11,9 @@ public final class LineCounter {
     private final String[] paths;
 
     public static void main(String[] args) {
-        if(args.length < 1) {
-            throw new IllegalArgumentException("Expected: uk.co.itstherules.LineCounter <root_dir>");
+        if (args.length < 1) {
+            throw new IllegalArgumentException(
+                    "Expected: uk.co.itstherules.LineCounter <root_dir>");
         }
         System.out.println("Lines of code:" + new LineCounter(args).count());
     }
@@ -20,7 +21,6 @@ public final class LineCounter {
     public LineCounter(String... paths) {
         this.paths = paths;
     }
-
 
     public int count() {
         int count = 0;
@@ -32,7 +32,7 @@ public final class LineCounter {
     }
 
     private int countLinesIn(File file) {
-        if(file.isDirectory()) {
+        if (file.isDirectory()) {
             return countLinesInDirectory(file);
         } else {
             return countLinesInFile(file);
@@ -40,7 +40,8 @@ public final class LineCounter {
     }
 
     private int countLinesInDirectory(File directory) {
-        System.out.println("Counting lines of code in directory:"+directory.getAbsolutePath());
+        System.out.println("Counting lines of code in directory:"
+                + directory.getAbsolutePath());
         File[] files = directory.listFiles(new ExclusionFilter());
         int count = 0;
         for (File file : files) {
@@ -53,17 +54,19 @@ public final class LineCounter {
         int count = 0;
         try {
             String absolutePath = file.getAbsolutePath();
-            if(!file.exists()) {
-                throw new IllegalArgumentException("File \""+ absolutePath +"\"supplied as a parameter does not exist");
+            if (!file.exists()) {
+                throw new IllegalArgumentException("File \"" + absolutePath
+                        + "\"supplied as a parameter does not exist");
             }
-            System.out.println("Counting lines of code in file:"+ absolutePath);
+            System.out
+                    .println("Counting lines of code in file:" + absolutePath);
 
             BufferedReader reader = new BufferedReader(new FileReader(file));
             String line;
-            while((line = reader.readLine()) != null) {
+            while ((line = reader.readLine()) != null) {
                 count++;
                 int length = line.length();
-                if(length > MAXIMUM_LINE_SIZE){
+                if (length > MAXIMUM_LINE_SIZE) {
                     count += length - MAXIMUM_LINE_SIZE;
                 }
             }

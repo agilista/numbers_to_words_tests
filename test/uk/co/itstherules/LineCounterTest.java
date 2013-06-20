@@ -7,7 +7,6 @@ import static org.junit.Assert.assertThat;
 
 public class LineCounterTest {
 
-
     @Test
     public void oneCount() {
         LineCounter unit = new LineCounter("test-resource/one_line.txt");
@@ -22,7 +21,8 @@ public class LineCounterTest {
 
     @Test
     public void twoCountOneLineReallyLong() {
-        LineCounter unit = new LineCounter("test-resource/two_lines_one_really_long.txt");
+        LineCounter unit = new LineCounter(
+                "test-resource/two_lines_one_really_long.txt");
         assertThat(unit.count(), equalTo(11));
     }
 
