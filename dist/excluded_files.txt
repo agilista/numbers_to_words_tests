@@ -1,0 +1,12 @@
+.ds_store
+thumbs.db
+.gitignore
+.idea
+.classpath
+.project
+.git
+classes
+dist
+made
+out
+output

@@ -1,0 +1,1 @@
+java -cp ./:numbers_to_words_tests.jar:lib/hamcrest-all-1.3.jar:lib/junit-4.11.jar uk.co.itstherules.LineCounter $@
