@@ -46,7 +46,11 @@ public class ExclusionFilterTest {
         ExclusionFilter unit = new ExclusionFilter();
         File file = new File("bogus.idea/blah");
         assertThat(unit.accept(file), is(true));
+        file = new File("bogus.idea.blah");
+        assertThat(unit.accept(file), is(true));
         file = new File("bogus.iml/project");
+        assertThat(unit.accept(file), is(true));
+        file = new File("bogus.iml.project");
         assertThat(unit.accept(file), is(true));
     }
 

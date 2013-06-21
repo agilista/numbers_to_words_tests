@@ -30,6 +30,8 @@ The session is 3 hours long, which means 2 1/2 hours of coding.  Please refer to
 *   If any libs are linked to, _all_ of the source from that library should also be included, with any subsequent
     linking, as they will all also be counted as lines of code.  Any build files, html files etc will also be included.
 
+*   Count any failing test at the end of the exercise as a 10 line forfeit
+
 Every participant should stick to the spirit of the rules and not the letter.
 If you're unsure whether you'll fall foul of competition rules, shout about it :o)
 
