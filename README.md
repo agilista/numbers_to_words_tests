@@ -32,6 +32,9 @@ The session is 3 hours long, which means 2 1/2 hours of coding.  Please refer to
 
 *   Count any failing test at the end of the exercise as a 10 line forfeit
 
+*   For compile to another language languages (such as coffeescript etc) the generated files will be treated as classes
+    would be in Java or C# and not counted
+
 Every participant should stick to the spirit of the rules and not the letter.
 If you're unsure whether you'll fall foul of competition rules, shout about it :o)
 
