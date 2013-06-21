@@ -10,3 +10,5 @@ dist
 made
 out
 output
+test
+test-resource

@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59c6c9e6-f18b-46c0-9c7c-3be503c6dd47" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/numbers_to_words_tests-tests.jar" afterPath="$PROJECT_DIR$/dist/numbers_to_words_tests-tests.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/numbers_to_words_tests.jar" afterPath="$PROJECT_DIR$/dist/numbers_to_words_tests.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/excluded_files.txt" afterPath="$PROJECT_DIR$/dist/excluded_files.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src-resource/excluded_files.txt" afterPath="$PROJECT_DIR$/src-resource/excluded_files.txt" />
     </list>
     <ignored path="numbers_to_words_tests.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,7 +86,16 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="42" selection-start="1766" selection-end="1766" vertical-scroll-proportion="0.5382716">
+            <state line="100" column="48" selection-start="3123" selection-end="3123" vertical-scroll-proportion="0.6432099">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="excluded_files.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src-resource/excluded_files.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="13" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -108,13 +122,13 @@
         <option value="$PROJECT_DIR$/src-resource/excluded_extensions" />
         <option value="$PROJECT_DIR$/src/uk/co/itstherules/NumbersToWordsTests.java" />
         <option value="$PROJECT_DIR$/src-resource/excluded_extensions.txt" />
-        <option value="$PROJECT_DIR$/src-resource/excluded_files.txt" />
         <option value="$PROJECT_DIR$/test-resource/two_lines_one_really_long.txt" />
         <option value="$PROJECT_DIR$/src/uk/co/itstherules/LineCounter.java" />
         <option value="$PROJECT_DIR$/test/uk/co/itstherules/LineCounterTest.java" />
         <option value="$PROJECT_DIR$/src/uk/co/itstherules/ExclusionFilter.java" />
         <option value="$PROJECT_DIR$/build.xml" />
         <option value="$PROJECT_DIR$/test/uk/co/itstherules/ExclusionFilterTest.java" />
+        <option value="$PROJECT_DIR$/src-resource/excluded_files.txt" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -792,11 +806,6 @@
         <state line="1" column="120" selection-start="129" selection-end="129" vertical-scroll-proportion="0.02093596" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src-resource/excluded_files.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="6" selection-start="90" selection-end="90" vertical-scroll-proportion="0.23029557" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src-resource/excluded_extensions.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="3" selection-start="25" selection-end="25" vertical-scroll-proportion="0.1046798" />
@@ -821,9 +830,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src-resource/excluded_files.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="13" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="42" selection-start="1766" selection-end="1766" vertical-scroll-proportion="0.5382716">
+        <state line="100" column="48" selection-start="3123" selection-end="3123" vertical-scroll-proportion="0.6432099">
           <folding />
         </state>
       </provider>

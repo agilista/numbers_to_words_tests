@@ -17,7 +17,7 @@ The session is 3 hours long, which means 2 1/2 hours of coding.  Please refer to
 
 ### Rules ###
 
-* You can take up the challenge individually or as a group.  Groups shouldn't really be larger than 5 people
+* You can take up the challenge individually or as a group.  Groups shouldn't really be larger than 6 people
 
 * We'll be using intellij to format each person or groups code using the defaults from when you code format
   (alt + cmd + l).
@@ -34,6 +34,8 @@ The session is 3 hours long, which means 2 1/2 hours of coding.  Please refer to
 
 *   For compile to another language languages (such as coffeescript etc) the generated files will be treated as classes
     would be in Java or C# and not counted
+
+*   Any unit tests written are not included as part of the line count
 
 Every participant should stick to the spirit of the rules and not the letter.
 If you're unsure whether you'll fall foul of competition rules, shout about it :o)
@@ -96,7 +98,7 @@ i.e.
 
 > sh ./count_me.sh ../
 
-p.s. this command for this project should be 784 lines including overage on characters (remember 1 line forfeit every
+p.s. this command for this project should be 668 lines including overage on characters (remember 1 line forfeit every
 character over 120 in 1 line) :o)
 
 This will run against the directory or file pointed to.  The code will recurse over the directory and, with the
